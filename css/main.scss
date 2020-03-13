@@ -1,0 +1,160 @@
+@import "global";
+@import "header";
+
+.body-fixed{
+  position:fixed;
+}
+.main-home{
+  height: 100%;
+  text-align: center;
+  background-image: url("../assets/franck-v-JjGXjESMxOY-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10%;
+  &__titulo{
+    font-size: 40px;
+    color: $color-claro;
+    letter-spacing: .1em;
+    width: 80%;
+    margin: auto ;
+    margin-bottom: 50px;
+  }
+  &__boton{
+    color: $color-oscuro;
+    background-color: $color-primario;
+    padding: 10px 15px;
+    font-size: 1.3em;
+    border-radius: 5px;
+  }
+}
+.blog{
+  max-width: 1440px;
+  margin: auto;
+  &__titulo{
+    border-bottom: 1px solid $color-fondo-oscuro;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 1em;
+    margin-top: 2em;
+    text-align: center;
+  }
+  &__boton{
+    border: 2px solid $color-primario;
+    padding: 5px 20px;
+    margin-top: 1em;
+  }
+  &-principal{
+    background-color: $color-fondo;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 0 30px 30px 30px;
+    &__imagen{
+      img {
+        width: 90%;
+      }
+    }
+    &__texto{
+      align-self: center;
+      font-size: 1.2em; 
+        p {
+        margin-bottom: 2em;
+        } 
+    }
+  }
+  &-lista{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin: 30px 30px 60px;
+    &-item{
+      padding-bottom: 10px;
+      &__imagen{
+        width: 100%;
+      }
+      &__texto{
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+.footer{
+  background-color: $color-oscuro;
+  border-top: 50px solid $color-primario;
+  p{
+    color: $color-claro;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+  }
+}
+.article{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__cover{
+    text-align: center;
+    img{
+      object-fit: cover;
+      height: 450px;
+      width: 90%;
+    }
+  }
+  &__news{
+    @extend .blog__titulo;
+    text-align: initial;
+  }
+  &__title{
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
+  &__contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: $color-fondo;
+    height: 200px;
+    padding: 0 100px;
+    &-mail{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img{
+        height: 120px;
+      }
+      &-text{
+        margin: 0 30px;
+      }
+    }
+  }
+  &-container{
+    align-self: center;
+    width: 70%;
+    margin-bottom: 50px;
+  }
+}
+.bio{
+  background-color: $color-fondo;
+  padding: 50px;
+  display: flex;
+  &__imagen img{
+    height: 250px;
+    border-radius: 50%;
+  }
+  &__texto{
+    margin: 50px;
+  }
+}
+.proyectos{
+  display: grid;
+  grid-template-columns: repeat(3,30%);
+  justify-content: center;
+  &__item{
+    padding: 20px;
+    margin-bottom: 50px;
+  }
+}
+.link{
+  font-family: $font-roboto-mono ;
+  font-size: 1.2em;
+  text-decoration: underline;
+}

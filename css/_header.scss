@@ -1,0 +1,32 @@
+.social {
+  background-color: $color-primario;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 60px;
+  &__icon {
+    color: $color-claro;
+  }
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: $color-claro;
+  &__logo img {
+    width: 220px;
+    margin-top: 10px;
+  }
+  &__about-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 100px;
+    font-weight: bold;
+    font-size: 18px;
+    a {
+      border-bottom: 1px solid $color-oscuro;
+    }
+  }
+}
