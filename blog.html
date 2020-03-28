@@ -6,36 +6,92 @@
     <link rel="stylesheet" href="assets/flaticon.css"/>
     <link rel="stylesheet" href="css/main.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&amp;family=Roboto+Mono&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet"/>
-    <title>Mi Blog</title>
+    <link rel="shortcut icon" href="assets/icon.png" type="image/x-icon"/>
+    <title>Hello Blog</title>
   </head>
   <body>
     <header>
       <section class="social"><a class="social__icon" href="https://www.facebook.com/fjarauj0"><i class="flaticon-001-facebook"></i></a><a class="social__icon" href="https://twitter.com/fjarauj0"><i class="flaticon-002-twitter"></i></a><a class="social__icon" href="https://www.instagram.com/fjarauj0"><i class="flaticon-011-instagram"></i></a><a class="social__icon" href="https://www.linkedin.com/in/francisco-javier-araujo-de-la-garza-449024180/"><i class="flaticon-010-linkedin"></i></a><a class="social__icon" href="https://www.youtube.com/channel/UCuwkJUHMODNxlLPPIZe--Gg"><i class="flaticon-008-youtube"></i></a></section>
       <nav class="nav-menu">
-        <section class="nav-menu__logo"><a href="/proyectos/XBlog/"><img src="assets/Logo-negro.png" alt="Logo"/></a></section>
+        <section class="nav-menu__logo"><a href="/proyectos/XBlog/"><img src="assets/Logo-negro1.png" alt="Logo"/></a></section>
         <section class="nav-menu__about-link"><a href="perfil.html">Sobre mi</a></section>
       </nav>
     </header>
     <main class="article">
-      <div class="article__cover"><img src="assets/blog-news.png" alt=""/></div>
-      <h3 class="article__news">Noticias</h3>
+      <div class="article__cover"><img src="assets/php.png" alt=""/></div>
+      <h3 class="article__news">Conceptos básicos</h3>
       <article class="article-container">
-        <h1 class="article__title">Titulo del blogpost</h1>
+        <h1 class="article__title">PHP</h1>
         <div class="article__text"> 
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, laborum eveniet tempora, nihil iure mollitia corrupti neque hic sapiente sequi aliquam incidunt quod corporis minima. Placeat similique totam velit cupiditate!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, laborum eveniet tempora, nihil iure mollitia corrupti neque hic sapiente sequi aliquam incidunt quod corporis minima. Placeat similique totam velit cupiditate!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, laborum eveniet tempora, nihil iure mollitia corrupti neque hic sapiente sequi aliquam incidunt quod corporis minima. Placeat similique totam velit cupiditate!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, laborum eveniet tempora, nihil iure mollitia corrupti neque hic sapiente sequi aliquam incidunt quod corporis minima. Placeat similique totam velit cupiditate!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, laborum eveniet tempora, nihil iure mollitia corrupti neque hic sapiente sequi aliquam incidunt quod corporis minima. Placeat similique totam velit cupiditate!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, laborum eveniet tempora, nihil iure mollitia corrupti neque hic sapiente sequi aliquam incidunt quod corporis minima. Placeat similique totam velit cupiditate!
-          </p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis eos harum veritatis rerum praesentium quibusdam tempore accusantium fugit repellat, vel quisquam molestiae velit odit necessitatibus, totam iste magni delectus voluptatibus?</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, laborum eveniet tempora, nihil iure mollitia corrupti neque hic sapiente sequi aliquam incidunt quod corporis minima. Placeat similique totam velit cupiditate!</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis eos harum veritatis rerum praesentium quibusdam tempore accusantium fugit repellat, vel quisquam molestiae velit odit necessitatibus, totam iste magni delectus voluptatibus?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, laborum eveniet tempora, nihil iure mollitia corrupti neque hic sapiente sequi aliquam incidunt quod corporis minima. Placeat similique totam velit cupiditate!
-          </p>
+          <h3>Estructura </h3>
+          <p>Cada instruccion debe terminar con ; y el codigo se escrib e entre &#60;?php - ?></p>
+          <pre class="qcode">&#60;?php
+  echo 'Hola';
+?></pre>
+          <h3>Variables</h3>
+          <p>Las variables son debilmente tipadas. Se declaran con $ y pueden empezar con letra o _</p>
+          <pre class="qcode">&#60;?php
+ $var1 = 1;
+ $name = 'Nombre';
+?></pre>
+          <p>Podemos ver informacion de una variable con:</p>
+          <pre class="qcode">&#60;?php
+ $var1 = 1;
+ var_dump($var1);
+?></pre>
+          <p>Al usar comillas dobles podemos incluir variables dentro y php las va a remplazar en el caso de que existan, con comillas simples no sucede</p>
+          <pre class="qcode">&#60;?php
+ $lastName = 'Araujo'
+ $name = "Francisco $lastName"
+ echo ($name);
+?></pre>
+          <h3>Tipos de Variables</h3>
+          <ul>
+            <li> <strong>boolean: </strong>Representa solamente un valor verdadero o falso.
+              <pre class="qcode">$a = true; 
+$b = false; </pre>
+            </li>
+            <li> <strong>integer: </strong>Representa un número entero positivo, negativo o 0. 
+              <pre class="qcode">$a = -123;
+$b = 0;
+$c = 7763; </pre>
+            </li>
+            <li> <strong>float o double: </strong>Representa un número de punto flotante, existen problemas de precisión con los números flotantes debido a la naturaleza binaria de las computadoras.
+              <pre class="qcode">$a = 12.24;
+$b = 1.5e3;
+$c = 7E-10;</pre>
+            </li>
+            <li> <strong>string: </strong>Representa una cadena de caracteres.Existen 4 formas de representar una cadena. Las 2 principales son usando comillas simples o comillas dobles.
+              <pre class="qcode">$a = ”Hola”;
+$b = ‘Mundo’;</pre>
+            </li>
+          </ul>
+          <p>Variables compuestas:</p>
+          <ul>
+            <li> <strong>array: </strong>Representa una colección de valores, aunque por defecto PHP usara índices numéricos, la realidad es que la estructura se representa como un mapa que colecciona pares llave-valor.    </li>
+            <li> <strong>object: </strong>Representa una instancia de una clase. Este tema lo veremos más a fondo en la clase de Programación Orientada a Objetos.    </li>
+            <li> <strong>callable: </strong>Es un tipo de dato especial que representa a algo que puede ser “llamado”, por ejemplo una función o un método.</li>
+            <li> <strong>iterable: </strong>A partir de PHP 7.1 iterable es un pseudo tipo de datos que puede ser recorrido.</li>
+          </ul>
+          <p>Tipos especiales:</p>
+          <ul>
+            <li> <strong>resource: </strong>Es un tipo de dato especial que representa un recurso externo, por ejemplo un archivo externo a tu aplicación.</li>
+            <li> <strong>NULL</strong>Es un valor especial que se usa para representar una variable sin valor.</li>
+          </ul>
+          <h3>Arrays</h3>
+          <p>Declaramos un array agregando items separados por , dentro [ ] tambien podemos dar los indices manualmente de la forma: 1 => 'item 1' las llaves pueden ser enteros cadenas o arreglos</p>
+          <pre class="qcode">$var2 = [
+ 'valor1',
+ 'valor2',
+ 'valor3'
+];
+
+$var3 = [
+ 0 =>'valor1',
+ 1 =>'valor2',
+ 'key' =>'valor3'
+];</pre>
+          <h3>Condicionales y ciclos</h3>
         </div>
       </article>
       <div class="article__contact">

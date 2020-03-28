@@ -33,3 +33,13 @@ h1,h2,h3,h4{
   font-family: $font-roboto-mono;
   margin: 20px 0;
 }
+
+.qcode{
+  background-color: $color-fondo;
+  color: $color-oscuro;
+  font-family: $font-roboto-mono;
+  border: 1px solid $color-fondo-oscuro;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 15px 20px;
+}

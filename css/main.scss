@@ -7,7 +7,7 @@
 .main-home{
   height: 100%;
   text-align: center;
-  background-image: url("../assets/franck-v-JjGXjESMxOY-unsplash.jpg");
+  background-image: url("../assets/bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -47,11 +47,12 @@
   &-principal{
     background-color: $color-fondo;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     padding: 0 30px 30px 30px;
     &__imagen{
+      text-align: center;
       img {
-        width: 90%;
+        max-width: 400px;
       }
     }
     &__texto{
@@ -69,8 +70,13 @@
     margin: 30px 30px 60px;
     &-item{
       padding-bottom: 10px;
+      &__img-container{
+        text-align: center;
+      }
       &__imagen{
         width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
       }
       &__texto{
         margin-bottom: 25px;

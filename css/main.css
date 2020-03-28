@@ -12,10 +12,8 @@ body {
 header {
   width: 100%;
   height: 140px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 50px 1fr;
-      grid-template-rows: 50px 1fr;
+  grid-template-rows: 50px 1fr;
 }
 
 a {
@@ -28,53 +26,46 @@ h1, h2, h3, h4 {
   margin: 20px 0;
 }
 
+.qcode {
+  background-color: #e6e9ed;
+  color: #1c1e22;
+  font-family: "Roboto Mono", monospace;
+  border: 1px solid #ccd1d9;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 15px 20px;
+}
+
 .social {
   background-color: #48cfad;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-end;
+  align-items: center;
   padding-right: 60px;
 }
-
 .social__icon {
   color: #fafafa;
 }
 
 .nav-menu {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   background-color: #fafafa;
 }
-
 .nav-menu__logo img {
   width: 220px;
   margin-top: 10px;
+  margin-left: 10px;
 }
-
 .nav-menu__about-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  align-items: center;
+  justify-content: flex-end;
   margin-right: 100px;
   font-weight: bold;
   font-size: 18px;
 }
-
 .nav-menu__about-link a {
   border-bottom: 1px solid #1c1e22;
 }
@@ -86,22 +77,20 @@ h1, h2, h3, h4 {
 .main-home {
   height: 100%;
   text-align: center;
-  background-image: url("../assets/franck-v-JjGXjESMxOY-unsplash.jpg");
+  background-image: url("../assets/bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 10%;
 }
-
 .main-home__titulo {
   font-size: 40px;
   color: #fafafa;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   width: 80%;
   margin: auto;
   margin-bottom: 50px;
 }
-
 .main-home__boton {
   color: #1c1e22;
   background-color: #48cfad;
@@ -114,7 +103,6 @@ h1, h2, h3, h4 {
   max-width: 1440px;
   margin: auto;
 }
-
 .blog__titulo, .article__news {
   border-bottom: 1px solid #ccd1d9;
   width: 90%;
@@ -123,54 +111,47 @@ h1, h2, h3, h4 {
   margin-top: 2em;
   text-align: center;
 }
-
 .blog__boton {
   border: 2px solid #48cfad;
   padding: 5px 20px;
   margin-top: 1em;
 }
-
 .blog-principal {
   background-color: #e6e9ed;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr 1fr;
-      grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   padding: 0 30px 30px 30px;
 }
-
-.blog-principal__imagen img {
-  width: 90%;
+.blog-principal__imagen {
+  text-align: center;
 }
-
+.blog-principal__imagen img {
+  max-width: 400px;
+}
 .blog-principal__texto {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   font-size: 1.2em;
 }
-
 .blog-principal__texto p {
   margin-bottom: 2em;
 }
-
 .blog-lista {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
   margin: 30px 30px 60px;
 }
-
 .blog-lista-item {
   padding-bottom: 10px;
 }
-
+.blog-lista-item__img-container {
+  text-align: center;
+}
 .blog-lista-item__imagen {
   width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
 }
-
 .blog-lista-item__texto {
   margin-bottom: 25px;
 }
@@ -179,7 +160,6 @@ h1, h2, h3, h4 {
   background-color: #1c1e22;
   border-top: 50px solid #48cfad;
 }
-
 .footer p {
   color: #fafafa;
   text-align: center;
@@ -188,72 +168,45 @@ h1, h2, h3, h4 {
 }
 
 .article {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
 }
-
 .article__cover {
   text-align: center;
 }
-
 .article__cover img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 450px;
   width: 90%;
 }
-
 .article__news {
   text-align: initial;
 }
-
 .article__title {
   font-size: 2em;
   margin-bottom: 1em;
 }
-
 .article__contact {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   background-color: #e6e9ed;
   height: 200px;
   padding: 0 100px;
 }
-
 .article__contact-mail {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
-
 .article__contact-mail img {
   height: 120px;
 }
-
 .article__contact-mail-text {
   margin: 0 30px;
 }
-
 .article-container {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   width: 70%;
   margin-bottom: 50px;
 }
@@ -261,30 +214,21 @@ h1, h2, h3, h4 {
 .bio {
   background-color: #e6e9ed;
   padding: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .bio__imagen img {
   height: 250px;
   border-radius: 50%;
 }
-
 .bio__texto {
   margin: 50px;
 }
 
 .proyectos {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (30%)[3];
-      grid-template-columns: repeat(3, 30%);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  grid-template-columns: repeat(3, 30%);
+  justify-content: center;
 }
-
 .proyectos__item {
   padding: 20px;
   margin-bottom: 50px;
@@ -295,4 +239,5 @@ h1, h2, h3, h4 {
   font-size: 1.2em;
   text-decoration: underline;
 }
+
 /*# sourceMappingURL=main.css.map */
